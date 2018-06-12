@@ -14,8 +14,8 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    width: 800,
-    height: 550,
+    
+    height:'auto',
   },
   subheader: {
     width: '100%',
@@ -64,9 +64,9 @@ function ImageGridList(props) {
 
   return (
     <div spacing={0} className={classes.root}>
-      <GridList cellHeight={160} spacing={0} className={classes.gridList} cols={3}>
+      <GridList cellHeight={100} spacing={4} className={classes.gridList} cols={3}>
         {tileData.map(tile => (
-          <GridListTile key={tile.photo} cols={tile.cols || 1}>
+          <GridListTile key={tile.photo} cols={tile.cols || 1} style={{ height: '140px' }}>
             <img src={tile.photo} alt={tile.name} />
             <GridListTileBar
               title={tile.name}
